@@ -1,17 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 300f;
     [SerializeField] private Transform leftFoot, rightFoot;
+    [SerializeField] private Transform spawnPosition;
     [SerializeField] private LayerMask whatIsGround;
+
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private Image fillColor;
+    [SerializeField] private Color greenHealth, lighterGreenHealth, yellowHealth, orangeHealth, redHealth;
+    [SerializeField] private TMP_Text silverCoinText;
+    
     private float horizontalValue;
     private float rayDistance = 0.25f;
     private bool isGrounded;
-    
+    private bool canMove;
+    private int startingHealth = 5;
+    private int currentHealth = 0;
+    public int silverCoinsCollected = 0;
+
     private Rigidbody2D rgbd;
     private SpriteRenderer rend;
     private Animator anim;
@@ -19,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canMove = true;
+        currentHealth = startingHealth;
+        silverCoinText.text = "" + silverCoinsCollected;
         rgbd = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -54,9 +71,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //For more smooth movement and response
+        //if NOTcanMove
+        if(!canMove)
+        {
+            return;
+        }
 
+        //For more smooth movement and response
         rgbd.velocity = new Vector2(horizontalValue * moveSpeed * Time.deltaTime, rgbd.velocity.y);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("SilverCoin"))
+        {
+            Destroy(other.gameObject);
+            silverCoinsCollected++;
+            silverCoinText.text = "" + silverCoinsCollected;
+        }
+
+        if (other.CompareTag("RedPotion"))
+        {
+            RestoreHealth(other.gameObject);
+        }
     }
 
     private void FlipSprite(bool direction)
@@ -71,6 +108,84 @@ public class PlayerMovement : MonoBehaviour
         rgbd.AddForce(new Vector2(0, jumpForce));
     }
 
+    public void TakeDamage(int damageTaken)
+    {
+        currentHealth -= damageTaken;
+        UpdateHealthBar();
+        print(currentHealth);
+
+        if(currentHealth <= 0)
+        {
+            Respawn();
+        }
+    }
+
+    public void TakeKnockback(float knockbackForce, float knockbackUpwards)
+    {
+        canMove = false;
+        rgbd.AddForce(new Vector2(knockbackForce, knockbackUpwards));
+        Invoke("CanMoveAgain", 0.25f);
+    }
+
+    private void CanMoveAgain()
+    {
+        canMove = true;
+    }
+
+    private void Respawn()
+    {
+        currentHealth = startingHealth;
+        UpdateHealthBar();
+        transform.position = spawnPosition.position;
+        rgbd.velocity  = Vector2.zero;
+    }
+
+    private void RestoreHealth(GameObject redPotion)
+    {
+        if (currentHealth >= startingHealth) 
+        {
+            return;
+        }
+        else
+        {
+            int healthToRestore = redPotion.GetComponent<RedPotion>().healthAmount;
+            currentHealth += healthToRestore;
+            UpdateHealthBar();
+            Destroy(redPotion);
+
+            if(currentHealth >= startingHealth)
+            {
+                currentHealth = startingHealth;
+            }
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        healthSlider.value = currentHealth;
+
+        if(currentHealth >= 5)
+        {
+            fillColor.color = greenHealth;
+        }
+        if (currentHealth == 4)
+        {
+            fillColor.color = lighterGreenHealth;
+        }
+        if (currentHealth == 3)
+        {
+            fillColor.color = yellowHealth;
+        }
+        if (currentHealth == 2)
+        {
+            fillColor.color = orangeHealth;
+        }
+        if (currentHealth == 1)
+        {
+            fillColor.color = redHealth;
+        }
+    }
+
     private bool CheckIfGrounded()
     {
         RaycastHit2D leftHit = Physics2D.Raycast(leftFoot.position, Vector2.down, rayDistance, whatIsGround);
@@ -79,8 +194,8 @@ public class PlayerMovement : MonoBehaviour
 
         //Draws the ray
 
-        Debug.DrawRay(leftFoot.position, Vector2.down * rayDistance, Color.blue, 0.25f);
-        Debug.DrawRay(rightFoot.position, Vector2.down * rayDistance, Color.red, 0.25f);
+        //Debug.DrawRay(leftFoot.position, Vector2.down * rayDistance, Color.blue, 0.25f);
+        //Debug.DrawRay(rightFoot.position, Vector2.down * rayDistance, Color.red, 0.25f);
 
         //Checks if either foot is on ground
 

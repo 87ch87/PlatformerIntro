@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - PinkStar
+  - EnemyBlocks
+  - SilverCoin
+  - RedPotion
   layers:
   - Default
   - TransparentFX
@@ -13,10 +17,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - PinkStar
+  - PinkStarBlock
+  - Player
+  - Platform
   - 
   - 
   - 
@@ -39,6 +43,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1872384415
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2737927391
     locked: 0

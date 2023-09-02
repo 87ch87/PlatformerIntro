@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_3
+      name: Pillar1
       rect:
         serializedVersion: 2
         x: 128
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_14
+      name: Pillar2
       rect:
         serializedVersion: 2
         x: 128
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_26
+      name: Pillar3
       rect:
         serializedVersion: 2
         x: 128
@@ -1116,8 +1116,10 @@ TextureImporter:
       GrassTopLeft: -145451587
       GrassTopMid: 333974423
       GrassTopRight: -1582719825
+      Pillar1: 1486329965
+      Pillar2: -481046070
+      Pillar3: -200781330
       Terrain (32x32)_10: 54842461
-      Terrain (32x32)_14: -481046070
       Terrain (32x32)_15: -1434100669
       Terrain (32x32)_16: -471860214
       Terrain (32x32)_17: -1836126663
@@ -1126,11 +1128,9 @@ TextureImporter:
       Terrain (32x32)_20: -171057161
       Terrain (32x32)_21: -612497467
       Terrain (32x32)_22: -1848477313
-      Terrain (32x32)_26: -200781330
       Terrain (32x32)_27: -88747272
       Terrain (32x32)_28: -1913126399
       Terrain (32x32)_29: -1705162199
-      Terrain (32x32)_3: 1486329965
       Terrain (32x32)_30: 1412579256
       Terrain (32x32)_31: -947643234
       Terrain (32x32)_32: 1093382475
