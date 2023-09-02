@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform leftFoot, rightFoot;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private AudioClip pickupSound;
+    [SerializeField] private AudioClip[] jumpSounds;
 
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Image fillColor;
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rgbd;
     private SpriteRenderer rend;
     private Animator anim;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         rgbd = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -88,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
             silverCoinsCollected++;
             silverCoinText.text = "" + silverCoinsCollected;
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            audioSource.PlayOneShot(pickupSound, 0.25f);
         }
 
         if (other.CompareTag("RedPotion"))
@@ -106,6 +112,9 @@ public class PlayerMovement : MonoBehaviour
         //Adds force vertically making the sprite jump on jump input
 
         rgbd.AddForce(new Vector2(0, jumpForce));
+        int randomValue = Random.Range(0, jumpSounds.Length);
+        print(randomValue);
+        audioSource.PlayOneShot(jumpSounds[randomValue], 0.20f);
     }
 
     public void TakeDamage(int damageTaken)
