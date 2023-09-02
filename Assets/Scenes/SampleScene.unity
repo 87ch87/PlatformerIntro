@@ -93421,7 +93421,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.36, y: 2.3996606}
+  m_Offset: {x: -6.937211, y: 2.3996606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -93432,7 +93432,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 4.661311}
+  m_Size: {x: 4.154421, y: 4.661311}
   m_EdgeRadius: 0
 --- !u!61 &1467939763
 BoxCollider2D:
@@ -130717,6 +130717,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 52fda7e31122cd442886a506c2b78412, type: 3}
   - {fileID: 8300000, guid: 677819ee63e6a2844bbfd63c69c3bae9, type: 3}
   - {fileID: 8300000, guid: d77a3c0af4dbd1342b741409156bc2a0, type: 3}
+  silverCoinParticles: {fileID: 797759178336908839, guid: a2541c33a516f3348896d18318394bce, type: 3}
+  dustParticles: {fileID: 38111291199769779, guid: 75448c714683a334892855c0852bab30, type: 3}
   healthSlider: {fileID: 506417284}
   fillColor: {fileID: 683042016}
   greenHealth: {r: 0.15214552, g: 0.41509432, b: 0.045033827, a: 1}

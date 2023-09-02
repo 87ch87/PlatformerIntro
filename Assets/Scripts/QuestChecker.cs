@@ -15,12 +15,14 @@ public class QuestChecked : MonoBehaviour
             {
                 dialogueBox.SetActive(true);
                 finishedText.SetActive(true);
+                
             }
             else
             {
                 dialogueBox.SetActive(true);
                 finishedText.SetActive(false);
-                unfinishedText.SetActive(true);  
+                unfinishedText.SetActive(true);
+               
             }
         }
     }
@@ -32,6 +34,7 @@ public class QuestChecked : MonoBehaviour
             dialogueBox.SetActive(false);
             finishedText.SetActive(false);
             unfinishedText.SetActive(false);
+           
         }
     }
 }

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private AudioClip[] jumpSounds;
+    [SerializeField] private GameObject silverCoinParticles, dustParticles;
 
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Image fillColor;
@@ -94,11 +95,14 @@ public class PlayerMovement : MonoBehaviour
             silverCoinText.text = "" + silverCoinsCollected;
             audioSource.pitch = Random.Range(0.8f, 1.2f);
             audioSource.PlayOneShot(pickupSound, 0.25f);
+            Instantiate(silverCoinParticles, other.transform.position, Quaternion.identity);
+            
         }
 
         if (other.CompareTag("RedPotion"))
         {
             RestoreHealth(other.gameObject);
+           
         }
     }
 
@@ -113,15 +117,14 @@ public class PlayerMovement : MonoBehaviour
 
         rgbd.AddForce(new Vector2(0, jumpForce));
         int randomValue = Random.Range(0, jumpSounds.Length);
-        print(randomValue);
         audioSource.PlayOneShot(jumpSounds[randomValue], 0.20f);
+        Instantiate(dustParticles, transform.position, dustParticles.transform.localRotation);
     }
 
     public void TakeDamage(int damageTaken)
     {
         currentHealth -= damageTaken;
         UpdateHealthBar();
-        print(currentHealth);
 
         if(currentHealth <= 0)
         {
