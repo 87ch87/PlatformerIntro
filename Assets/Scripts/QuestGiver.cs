@@ -19,7 +19,7 @@ public class Snail : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             textPopUp.SetActive(false);
-            return;
+           
         }
     }
 }

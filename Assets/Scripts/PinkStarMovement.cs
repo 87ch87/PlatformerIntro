@@ -11,6 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField] private float upwardForce = 100f;
     [SerializeField] private int damageDealt = 1;
     private SpriteRenderer rend;
+    private bool canMove = true;
 
     private void Start()
     {
@@ -19,6 +20,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!canMove)
+            return;
+
         transform.Translate(new Vector2 (moveSpeed, 0) * Time.deltaTime);
 
 
@@ -73,7 +77,13 @@ public class NewBehaviourScript : MonoBehaviour
         {
             other.GetComponent<Rigidbody2D>().velocity = new Vector2(other.GetComponent<Rigidbody2D>().velocity.x, 0);
             other.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, bounciness));
-            Destroy(gameObject);   
+            GetComponent<Animator>().SetTrigger("Hit");
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().gravityScale = 0;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            canMove = false;
+            Destroy(gameObject, 0.4f);   
         }
     } 
 
