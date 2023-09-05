@@ -9,6 +9,7 @@ TagManager:
   - EnemyBlocks
   - SilverCoin
   - RedPotion
+  - Spikes
   layers:
   - Default
   - TransparentFX

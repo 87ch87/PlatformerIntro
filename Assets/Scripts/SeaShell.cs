@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeaShell : MonoBehaviour
 {
 
-    [SerializeField] private float jumpForce = 200f;
+    [SerializeField] private float jumpForce;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
