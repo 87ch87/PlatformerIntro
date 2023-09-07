@@ -5309,7 +5309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (5)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -14002,7 +14006,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (2)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -14489,6 +14497,14 @@ PrefabInstance:
     - target: {fileID: 2303630602355764003, guid: 41ae3364594e9e14cb4663832c840028, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723704085768082324, guid: 41ae3364594e9e14cb4663832c840028, type: 3}
+      propertyPath: m_Size.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723704085768082324, guid: 41ae3364594e9e14cb4663832c840028, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5594416197870906866, guid: 41ae3364594e9e14cb4663832c840028, type: 3}
       propertyPath: m_Name
@@ -15651,7 +15667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (7)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -19989,7 +20009,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 15419, y: 3457}
-  m_SizeDelta: {x: 1100, y: 300}
+  m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609813426
 MonoBehaviour:
@@ -20163,7 +20183,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (8)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -32455,7 +32479,7 @@ GameObject:
   - component: {fileID: 986205945}
   - component: {fileID: 986205944}
   m_Layer: 5
-  m_Name: Image_SilverCoin
+  m_Name: Image_Keys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32477,8 +32501,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150.3, y: -67}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchoredPosition: {x: -144.7, y: -64.9}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986205944
 MonoBehaviour:
@@ -32500,7 +32524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 09af392a23f60af428fbd26bdc5e7f6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc09cc03f7a6a9841848ff7b3a9fab49, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -34752,7 +34776,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (3)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -36078,7 +36106,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You still have \nsilver coins to collect!"
+  m_text: 'We need
+
+    all the keys!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c76602f7b0628ec498628b01258a838b, type: 2}
   m_sharedMaterial: {fileID: 8587936279906697541, guid: c76602f7b0628ec498628b01258a838b, type: 2}
@@ -46239,7 +46269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (6)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -65219,7 +65253,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Well done!
 
-    New adventures await...'
+    Now to find
+
+    the treasure... '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c76602f7b0628ec498628b01258a838b, type: 2}
   m_sharedMaterial: {fileID: 8587936279906697541, guid: c76602f7b0628ec498628b01258a838b, type: 2}
@@ -77051,8 +77087,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1689750140}
   m_Layer: 0
-  m_Name: --[SILVERCOINS]--
-  m_TagString: SilverCoin
+  m_Name: --[Keys]--
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78491,7 +78527,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1100, y: 300}
+  m_SizeDelta: {x: 950, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737722085
 MonoBehaviour:
@@ -79628,7 +79664,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (4)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -80707,7 +80747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (1)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -82403,7 +82447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin (9)
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder
@@ -82762,7 +82810,7 @@ GameObject:
   - component: {fileID: 1858760241}
   - component: {fileID: 1858760240}
   m_Layer: 5
-  m_Name: Text_SilverCoins
+  m_Name: Text_Keys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82785,7 +82833,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -72, y: -72}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858760240
 MonoBehaviour:
@@ -82816,8 +82864,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288973686
-  m_fontColor: {r: 0.46274513, g: 0.54509807, b: 0.6431373, a: 1}
+    rgba: 4286109934
+  m_fontColor: {r: 0.9333334, g: 0.8470589, b: 0.47058827, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -89479,7 +89527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Find the 10 silver coins \nand bring them through \nthe door to the ship!"
+  m_text: "Find the 10 keys and \nbring them through \nthe door to the ship!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c76602f7b0628ec498628b01258a838b, type: 2}
   m_sharedMaterial: {fileID: 8587936279906697541, guid: c76602f7b0628ec498628b01258a838b, type: 2}
@@ -91304,7 +91352,7 @@ Transform:
   m_GameObject: {fileID: 2126937684}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.03, y: 5.55, z: 0}
+  m_LocalPosition: {x: -8.65, y: -2.52, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -91374,7 +91422,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 52fda7e31122cd442886a506c2b78412, type: 3}
   - {fileID: 8300000, guid: 677819ee63e6a2844bbfd63c69c3bae9, type: 3}
   - {fileID: 8300000, guid: d77a3c0af4dbd1342b741409156bc2a0, type: 3}
-  silverCoinParticles: {fileID: 797759178336908839, guid: a2541c33a516f3348896d18318394bce, type: 3}
+  keyParticles: {fileID: 797759178336908839, guid: a2541c33a516f3348896d18318394bce, type: 3}
   dustParticles: {fileID: 38111291199769779, guid: 75448c714683a334892855c0852bab30, type: 3}
   healthSlider: {fileID: 506417284}
   fillColor: {fileID: 683042016}
@@ -91383,8 +91431,8 @@ MonoBehaviour:
   yellowHealth: {r: 0.7062201, g: 0.7075472, b: 0.1768868, a: 1}
   orangeHealth: {r: 0.6886792, g: 0.35454637, b: 0.029236369, a: 1}
   redHealth: {r: 0.6132076, g: 0.10123709, b: 0.10123709, a: 1}
-  silverCoinText: {fileID: 1858760240}
-  silverCoinsCollected: 0
+  keyText: {fileID: 1858760240}
+  keysCollected: 0
 --- !u!95 &2126937690
 Animator:
   serializedVersion: 5
@@ -92545,7 +92593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_Name
-      value: SilverCoin
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004513006164953662, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
+      propertyPath: m_TagString
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 4753847236261349860, guid: c9b1cab68350a6440a4f5fdc0992533a, type: 3}
       propertyPath: m_SortingOrder

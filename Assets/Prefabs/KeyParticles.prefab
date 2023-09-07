@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8033032923579669427}
   - component: {fileID: 2295094540761940460}
   m_Layer: 0
-  m_Name: SilverCoinParticles
+  m_Name: KeyParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1546,7 +1546,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 09af392a23f60af428fbd26bdc5e7f6b, type: 3}
+    - sprite: {fileID: 21300000, guid: fc09cc03f7a6a9841848ff7b3a9fab49, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4899,3 +4899,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2091a748f533b6445a4b3a28002f5736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetime: 1

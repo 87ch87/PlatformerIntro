@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 89465740411542985}
   - component: {fileID: 7334808504129832845}
   m_Layer: 0
-  m_Name: SilverCoin
+  m_Name: Key
   m_TagString: SilverCoin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 09af392a23f60af428fbd26bdc5e7f6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc09cc03f7a6a9841848ff7b3a9fab49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 4004513006164953662}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3e03090c3c0a154daab074563582ee7, type: 2}
+  m_Controller: {fileID: 9100000, guid: eea7da85e596be3419b0280ee9149759, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

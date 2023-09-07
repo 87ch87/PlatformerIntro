@@ -7,9 +7,9 @@ TagManager:
   - Ground
   - PinkStar
   - EnemyBlocks
-  - SilverCoin
   - RedPotion
   - Spikes
+  - Key
   layers:
   - Default
   - TransparentFX

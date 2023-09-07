@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private AudioClip[] jumpSounds;
-    [SerializeField] private GameObject silverCoinParticles, dustParticles;
+    [SerializeField] private GameObject keyParticles, dustParticles;
 
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Image fillColor;
     [SerializeField] private Color greenHealth, lighterGreenHealth, yellowHealth, orangeHealth, redHealth;
-    [SerializeField] private TMP_Text silverCoinText;
+    [SerializeField] private TMP_Text keyText;
     
     private float horizontalValue;
     private float rayDistance = 0.25f;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canMove;
     private int startingHealth = 5;
     private int currentHealth = 0;
-    public int silverCoinsCollected = 0;
+    public int keysCollected = 0;
 
     private Rigidbody2D rgbd;
     private SpriteRenderer rend;
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canMove = true;
         currentHealth = startingHealth;
-        silverCoinText.text = "" + silverCoinsCollected;
+        keyText.text = "" + keysCollected;
         rgbd = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -88,14 +88,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("SilverCoin"))
+        if (other.CompareTag("Key"))
         {
             Destroy(other.gameObject);
-            silverCoinsCollected++;
-            silverCoinText.text = "" + silverCoinsCollected;
+            keysCollected++;
+            keyText.text = "" + keysCollected;
             audioSource.pitch = Random.Range(0.8f, 1.2f);
             audioSource.PlayOneShot(pickupSound, 0.25f);
-            Instantiate(silverCoinParticles, other.transform.position, Quaternion.identity);
+            Instantiate(keyParticles, other.transform.position, Quaternion.identity);
             
         }
 

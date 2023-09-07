@@ -10,7 +10,6 @@ public class QuestChecked : MonoBehaviour
     [SerializeField] private int questGoal = 10;
     [SerializeField] private int levelToLoad;
     [SerializeField] private float timeToLoad = 3.0f;
-    private int currentLevel = 1;
 
     private Animator anim;
     private bool levelIsLoading = false;
@@ -23,23 +22,20 @@ public class QuestChecked : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if(other.GetComponent<PlayerMovement>().silverCoinsCollected >= questGoal)
+            if(other.GetComponent<PlayerMovement>().keysCollected >= questGoal)
             {
                 dialogueBox.SetActive(true);
                 unfinishedText.SetActive(false);
                 finishedText.SetActive(true);
 
-                if(currentLevel == 1)
-                {
+
+                if(SceneManager.GetActiveScene().buildIndex == 1)              
                     anim.SetTrigger("Door");
-                }
-                
-                if (currentLevel == 2)
-                {
+                               
+                if (SceneManager.GetActiveScene().buildIndex == 2)
                     anim.SetTrigger("Chest");
-                }
                 
-                currentLevel++;
+                
                 Invoke("LoadNextLevel", timeToLoad);
                 levelIsLoading = true;
                 
