@@ -92928,6 +92928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 678425548}
     m_Modifications:
+    - target: {fileID: 16630548212759383, guid: 85498dcab1b255148bba1d0a96f83826, type: 3}
+      propertyPath: m_UseColliderMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1751041681649734003, guid: 85498dcab1b255148bba1d0a96f83826, type: 3}
       propertyPath: m_SortingLayer
       value: 0

@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] private GameObject creditsPanel;   
 
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);
@@ -26,4 +27,8 @@ public class MenuController : MonoBehaviour
     {
         creditsPanel.SetActive(false);
     }
+
+
 }
+
+    
